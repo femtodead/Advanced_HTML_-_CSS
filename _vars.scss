@@ -1,0 +1,21 @@
+$mainСolor: #f16d7f;
+$sizeWorkZone: 1140px;
+$centrSite: calc(50% - $sizeWorkZone/2);
+$padingToptest: 25px + 6px + 38px + 2px;
+$padingcategoriesTop: calc($centrSite + 233px);
+
+@mixin dispF ($jc , $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin text ($fs, $lh, $fw, $col, $tt) {
+    font-family: Lato;
+    font-size: $fs;
+    line-height: $lh;   
+    font-weight: $fw;
+    text-transform: $tt;
+    letter-spacing: 0.025em;
+    color: $col;
+}

@@ -1,0 +1,866 @@
+@import "vars";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+.centr {
+    padding-left: $centrSite;
+    padding-right: $centrSite;
+
+}
+
+
+
+.header {
+    padding-top: 25px;
+    padding-bottom: 24px;
+    @include dispF(space-between, center);
+
+    &_left {
+        @include dispF(normal, center);
+        gap: 13px;
+
+        &_brandName {
+            @include text (27px, 32px, 300, #222222, uppercase);
+
+            &_D {
+                @include text (27px, 32px, 900, #f16d7f, uppercase);
+            }
+        }
+
+        &_browseAndSearch {
+            height: 38px;
+            margin-left: 25px;
+            @include dispF(normal, normal);
+            margin-top: 7px;
+            margin-bottom: 6px;
+
+            &_button {
+                display: flex;
+                align-items: center;
+                position: relative;
+                padding-left: 15px;
+                padding-right: 9px;
+                border-radius: 3px 0px 0px 3px;
+                border: 1px solid #e6e6e6;
+                background-color: #cdcdcc;
+                background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%);
+
+                &_text {
+                    @include text (14px, 0px, 300, #222222, none);
+                }
+
+                &_img {
+                    padding-left: 8px;
+                    padding-top: 2px;
+                    padding-bottom: 2px;
+                    padding-right: 0px;
+                }
+            }
+
+            &_entryField {
+
+                padding-left: 16px;
+                background-color: #ffffff;
+                border: 1px solid #e6e6e6;
+                border-left: 0px;
+                width: 280px;
+                @include text (14px, 0px, 300, #a4a4a4, none);
+
+            }
+
+            &_buttonSearch {
+                background-color: #ffffff;
+                border: 1px solid #e6e6e6;
+                border-radius: 0px 3px 3px 0px;
+                border-left: 0px;
+                padding: 0px 11px;
+
+            }
+        }
+    }
+
+    &_right {
+        @include dispF(space-between, center);
+        gap: 26px;
+        margin-top: 6px;
+        margin-bottom: 7px;
+
+        &_basket {
+            margin-top: 6px;
+        }
+
+        &_personalArea {
+            &_button {
+                position: relative;
+                width: 130px;
+                height: 38px;
+                background-color: #f16d7f;
+                border-width: 0px;
+                @include dispF(flex-end, center);
+
+                &_text {
+                    @include text (15px, 32px, 400, #ffffff, none);
+                }
+
+                &_img {
+                    margin: 16px 12px;
+                    margin-left: 8px;
+                }
+
+            }
+
+        }
+
+    }
+}
+
+.testDiv,
+.header_right_personalArea_inbutton {
+    display: none;
+}
+
+.header_right_personalArea_inbutton:checked~.testDiv {
+    display: block;
+}
+
+.testDiv {
+    position: absolute;
+    top: $padingToptest;
+    background-color: #222222;
+    width: 130px;
+    height: 500px;
+}
+
+.testDiv2,
+.header_left_browseAndSearch_inbutton {
+    display: none;
+}
+
+.header_left_browseAndSearch_inbutton:checked~.testDiv2 {
+    display: block;
+}
+
+.testDiv2 {
+    position: absolute;
+    top: $padingToptest + 1px;
+    background-color: #222222;
+    width: 130px;
+    height: 500px;
+}
+
+
+.categoriesTop {
+    padding-left: $padingcategoriesTop;
+    padding-right: $padingcategoriesTop;
+    @include dispF(space-between, center);
+    position: relative;
+    &_hover{
+        
+        position: absolute;
+        top: 50px;
+        display: none;
+        width: 100%;
+        max-width: 1140px - 233px - 233px;
+        background-color: #222222;
+        align-items: center;
+        justify-content: space-between;
+        &_card{
+            @include text (14px, 14px, 700, #e6e6e6, uppercase);
+        }
+
+    }
+    &_triangle{
+        display: none;
+        position: absolute;
+        top: 41px;
+        left: calc($padingcategoriesTop + 16px) ;
+    }
+}
+
+.styleTextTop:hover ~ .categoriesTop_hover{
+    display: flex;
+}
+
+.categoriesTop_name_Home:hover ~ .categoriesTop_triangle{
+    display: block;
+}
+
+.categoriesTop_name_Man:hover ~ .categoriesTop_triangle{
+    display: block;
+    left: calc(50% - 570px + 233px + 100px) ;
+}
+
+.categoriesTop_name_Women:hover ~ .categoriesTop_triangle{
+    display: block;
+    left: calc(50% - 570px + 233px + 188px) ;
+}
+
+.categoriesTop_name_Kids:hover ~ .categoriesTop_triangle{
+    display: block;
+    left: calc(50% - 570px + 233px + 276px) ;
+}
+
+.categoriesTop_name_Accoseriese:hover ~ .categoriesTop_triangle{
+    display: block;
+    left: calc(50% - 570px + 233px + 385px) ;
+    flex-direction: row-reverse;
+}
+
+.categoriesTop_name_Accoseriese:hover ~ .categoriesTop_hover{flex-direction: row-reverse;}
+
+.categoriesTop_name_Featured:hover ~ .categoriesTop_triangle{
+    display: block;
+    left: calc(50% - 570px + 233px + 510px) ;
+    flex-direction: row-reverse;
+}
+
+.categoriesTop_name_Featured:hover ~ .categoriesTop_hover{flex-direction: row-reverse;}
+
+.categoriesTop_name_HotDeals:hover ~ .categoriesTop_triangle{
+    display: block;
+    left: calc(50% - 570px + 233px + 625px) ;
+    flex-direction: row-reverse;
+}
+
+.categoriesTop_name_HotDeals:hover ~ .categoriesTop_hover{flex-direction: row-reverse;}
+
+
+.styleTextTop {
+    margin-top: 19px;
+    margin-bottom: 22px;
+    @include text (14px, 14px, 700, #222222, uppercase);
+    text-decoration: none;
+}
+
+.TopBrandName {
+    background: url(./img/backgrayndTop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 224px;
+    padding-bottom: 297px;
+    margin-bottom: 98px;
+    @include dispF (space-between, center);
+
+    &_border {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 12px;
+        border: solid;
+        border-width: 0px;
+        border-left-width: 12px;
+        border-color: $mainСolor;
+        width: 485px;
+        height: 92px;
+
+        &_THEBRAND {
+            @include text (60px, 0.8, 900, #222222, none);
+        }
+
+        &_OFLUXERIOUS {
+            @include text (40px, 0.7, 900, #222222, none);
+        }
+
+        &_FASHION {
+            @include text (40px, 0.7, 900, #f16d7f, none);
+        }
+    }
+}
+
+
+.categoriesInImg {
+    display: grid;
+    grid-template-columns: repeat(2, 560px);
+    grid-template-rows: repeat(3, 261px);
+    gap: 20px;
+    margin-bottom: 100px;
+
+    &_forMen {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        position: relative;
+
+        &_back {
+            position: absolute;
+            z-index: 1;
+        }
+
+        &_Text {
+            position: absolute;
+            z-index: 2;
+            padding: 16px 18px;
+            background-color: #fff;
+            top: 26px;
+
+            &_h3 {
+                @include text (18px, 1.2, 900, #222222, uppercase);
+            }
+
+            &_h2 {
+                @include text (30px, 1.2, 900, #f16d7f, uppercase);
+            }
+        }
+    }
+
+    &_women {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        position: relative;
+
+        &_back {
+            position: absolute;
+            z-index: 1;
+        }
+
+        &_Text {
+            position: absolute;
+            z-index: 2;
+            padding: 16px 18px;
+            background-color: #fff;
+            top: 26px;
+
+            &_h3 {
+                @include text (18px, 1.2, 900, #222222, uppercase);
+            }
+
+            &_h2 {
+                @include text (30px, 1.2, 900, #f16d7f, uppercase);
+            }
+        }
+    }
+
+    &_accesories {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        position: relative;
+
+        &_back {
+            position: absolute;
+            z-index: 1;
+        }
+
+        &_Text {
+            position: absolute;
+            z-index: 2;
+            padding: 16px 18px;
+            background-color: #fff;
+            top: 26px;
+
+            &_h3 {
+                @include text (18px, 1.2, 900, #222222, uppercase);
+            }
+
+            &_h2 {
+                @include text (30px, 1.2, 900, #f16d7f, uppercase);
+            }
+        }
+    }
+
+    &_forKids {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        position: relative;
+
+        &_back {
+            position: absolute;
+            z-index: 1;
+        }
+
+        &_Text {
+            position: absolute;
+            z-index: 2;
+            padding: 16px 18px;
+            background-color: #fff;
+            top: 26px;
+
+            &_h3 {
+                @include text (18px, 1.2, 900, #222222, uppercase);
+            }
+
+            &_h2 {
+                @include text (30px, 1.2, 900, #f16d7f, uppercase);
+            }
+        }
+    }
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_h3 {
+        margin-bottom: 16px;
+        font-family: Lato;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        color: #222222;
+    }
+
+    &_p {
+        margin-bottom: 60px;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #9f9f9f;
+    }
+
+    &_list {
+        display: grid;
+        grid-template-columns: repeat(4, 263px);
+        grid-template-rows: repeat(2, 364px);
+        row-gap: 39px;
+        column-gap: 32px;
+        margin-bottom: 58px;
+
+        &_card {
+            position: relative;
+
+            &_hover {
+                position: absolute;
+                background-color: rgba(58, 56, 56, 0.83);
+                width: 100%;
+                height: 280px;
+                display: none;
+                justify-content: center;
+                align-items: center;
+
+                &_button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    width: 123px;
+                    height: 39px;
+                    background-color: rgba(255, 255, 255, 0.0);
+                    border: 1px solid #ffffff;
+                }
+
+                &_span {
+                    font-family: Lato;
+                    font-size: 13px;
+                    font-weight: 700;
+                    color: #ffffff;
+                }
+            }
+
+            &_img {
+                margin-bottom: 19px;
+            }
+
+            &_name {
+                font-family: Lato;
+                font-size: 13px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: #222222;
+                margin-bottom: 17px;
+                margin-left: 15px;
+            }
+
+            &_price {
+                font-family: Lato;
+                font-size: 16px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #f16d7f;
+                margin-bottom: 21px;
+                margin-left: 16px;
+            }
+        }
+
+        &_card:hover .products_list_card_hover {
+            display: flex;
+        }
+
+        &_card:hover {
+            box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+        }
+    }
+
+    &_button {
+        margin-bottom: 113px;
+        padding-left: 24px;
+        padding-top: 18px;
+        padding-bottom: 19px;
+        padding-right: 19px;
+        background-color: #f16d7f;
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.025em;
+        color: #ffffff;
+        border-width: 0px;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+    }
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: 767px 373px;
+    grid-template-rows: 529px;
+    padding-bottom: 97px;
+
+    &_left {
+        position: relative;
+
+        &_back1 {
+            position: absolute;
+            z-index: 3;
+        }
+
+        &_back2 {
+            position: absolute;
+            z-index: 2;
+        }
+
+        &_text {
+            position: absolute;
+            z-index: 4;
+            top: 146px;
+            left: 39px;
+            display: flex;
+            flex-direction: column;
+
+            &_30 {
+                font-family: Lato;
+                font-size: 53.7px;
+                line-height: 1.2;
+                font-weight: 700;
+                letter-spacing: 0.025em;
+                color: #ffffff;
+            }
+
+            &_OFFER {
+                font-family: Lato;
+                font-size: 53.7px;
+                font-weight: 700;
+                letter-spacing: 0.025em;
+                color: #f16d7f;
+            }
+
+            &_FORWOMEN {
+                font-family: Lato;
+                font-size: 32.2px;
+                font-weight: 700;
+                letter-spacing: 0.025em;
+                color: #ffffff;
+            }
+        }
+    }
+
+    &_right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: #222224;
+
+        &_card {
+            display: flex;
+            align-items: flex-start;
+            gap: 33px;
+            padding-left: 36px;
+            padding-right: 43px;
+
+            &_text {
+                &_h3 {
+                    font-family: Lato;
+                    font-size: 20px;
+                    font-weight: 700;
+                    letter-spacing: 0.025em;
+                    color: #fbfbfb;
+                    margin-bottom: 17px;
+                }
+
+                &_p {
+                    font-family: Lato;
+                    font-size: 14px;
+                    font-weight: 300;
+                    letter-spacing: 0.025em;
+                    color: #fbfbfb;
+                }
+            }
+        }
+    }
+}
+
+.newsletter {
+    padding-top: 111px;
+    padding-bottom: 156px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-image: url(./img/back_comment.png);
+    // background: no-repeat;
+    background-size: cover;
+
+    &_back {
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+
+    &_right {
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &_h3 {
+            font-family: Lato;
+            font-size: 24px;
+
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+            color: #222224;
+        }
+
+        &_h4 {
+            margin-bottom: 35px;
+            font-family: Lato;
+            font-size: 14px;
+
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: 0.025em;
+            color: #222224;
+        }
+
+        &_input {
+            display: flex;
+
+            &_button {
+                width: 104px;
+                height: 46px;
+                background-color: #f16d7f;
+                border-radius: 0px 23px 23px 0px;
+                border-width: 0px;
+                font-family: Lato;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 0.025em;
+                color: #ffffff;
+            }
+
+            &_inputline {
+                width: 306px;
+                height: 46px;
+                background-color: #e1e1e1;
+                border-radius: 23px 0px 0px 23px;
+                border-width: 0px;
+                padding-left: 28px;
+                opacity: 0.67;
+                font-family: Lato;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 0.025em;
+                color: #222224;
+            }
+
+        }
+    }
+
+    &_left {
+        display: flex;
+        align-items: flex-start;
+        gap: 28px;
+        z-index: 3;
+
+        &_text {
+            width: 386px;
+            margin-top: 12px;
+            padding-right: 72px;
+
+            &_comment {
+                font-family: Lato;
+                font-size: 16px;
+                font-weight: 400;
+                font-style: italic;
+                letter-spacing: 0.025em;
+                color: #222224;
+            }
+
+            &_h5 {
+                margin-top: 19px;
+                font-family: Lato;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 0.025em;
+                color: #f16d7f;
+            }
+
+            &_h6 {
+                margin-bottom: 41px;
+                font-family: Lato;
+                font-size: 12px;
+                font-weight: 300;
+                letter-spacing: 0.025em;
+                color: #222224;
+            }
+
+            &_slider {
+                &_button {
+                    width: 28px;
+                    height: 4px;
+                    background-color: #d6d6d6;
+                    border-width: 0px;
+
+                }
+            }
+        }
+    }
+}
+
+.newsletter_left_text_slider_button:hover {
+    background-color: #f16d7f;
+}
+
+.bottomNav {
+    display: flex;
+    margin-top: 109px;
+    justify-content: space-between;
+    padding-bottom: 89px;
+
+    &_logoAndDescription {
+        width: 427px;
+
+        &_logo {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            margin-bottom: 29px;
+
+            &_brandName {
+                font-family: Lato;
+                font-size: 27px;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 0.025em;
+                color: #3e3e40;
+
+                &_D {
+                    font-family: Lato;
+                    font-size: 27px;
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    letter-spacing: 0.025em;
+                    color: #f16d7f;
+                }
+            }
+        }
+
+        &_discr1 {
+            margin-bottom: 37px;
+            font-family: Lato;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            color: #898989;
+        }
+
+        &_discr2 {
+            font-family: Lato;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 300;
+            letter-spacing: 0.025em;
+            color: #898989;
+        }
+    }
+
+    &_card {
+        display: flex;
+        flex-direction: column;
+
+        &_h4 {
+            margin-bottom: 45px;
+            font-family: Lato;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.025em;
+            color: #f16d7f;
+        }
+
+        &_subsection {
+            margin-bottom: 30px;
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0.025em;
+            color: #898989;
+            text-decoration: none;
+        }
+    }
+}
+
+.subsectionLast {
+    margin-bottom: 0px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #e6e6e6;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    align-items: center;
+
+    &_socialMedia {
+        display: flex;
+        gap: 8px;
+
+        &_logo {
+            display: flex;
+            width: 32px;
+            height: 32px;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+
+            &:hover {
+                background-color: #f16d7f;
+
+            }
+
+            &:hover path {
+                fill: #f7f7f8;
+            }
+        }
+
+        
+    }
+    &_signature {
+        padding-top: 9px;
+        padding-bottom: 8px;
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.025em;
+        color: #7a7a7a;
+    }
+}
