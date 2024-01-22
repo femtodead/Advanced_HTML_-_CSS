@@ -304,7 +304,6 @@
     padding-right: $padingcategoriesTop;
     @include dispF(space-between, center);
 
-
     &_hover {
         padding: 21px 19px;
         width: 806px;
@@ -436,7 +435,7 @@
     background-repeat: no-repeat;
     padding-top: 224px;
     padding-bottom: 297px;
-    margin-bottom: 98px;
+    margin-bottom: 44px;
     @include dispF (space-between, center);
 
     &_border {
@@ -614,11 +613,10 @@
     }
 
     &_list {
-        display: grid;
-        grid-template-columns: repeat(4, 263px);
-        grid-template-rows: repeat(2, 364px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         row-gap: 39px;
-        column-gap: 32px;
         margin-bottom: 58px;
 
         &_card {
@@ -1053,5 +1051,23 @@
         font-weight: 400;
         letter-spacing: 0.025em;
         color: #7a7a7a;
+    }
+}
+
+.audio {
+ position: sticky;
+ top: 160px;
+ width: 15%;
+ z-index: 1000;
+ left: 100%;
+}   
+
+@supports (display: grid) {
+    .products_list{
+        display: grid;
+        grid-template-columns: repeat(4, 263px);
+        grid-template-rows: repeat(2, 364px);
+        row-gap: 39px;
+        column-gap: 32px;
     }
 }
