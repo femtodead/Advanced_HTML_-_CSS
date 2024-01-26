@@ -1,0 +1,268 @@
+@import "headerFooter";
+
+.categoriesTop_hover {
+    background-color: #fff;
+    z-index: 10;
+}
+
+.testDiv {
+    z-index: 9;
+}
+
+.categoriesTop_hover {
+    background-color: #fff;
+    z-index: 10;
+}
+
+.topcontent .last_nav {
+
+    font-family: Lato;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f16d7f;
+}
+
+// 1 пример
+
+.decor__left>h5 {
+    font-family: Lato;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+    margin-bottom: 15px;
+}
+
+// 2 пример
+
+h5+h6 {
+    font-family: Lato;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #b3b2b2;
+    margin-bottom: 34px;
+    text-transform: none;
+}
+
+// 3 пример
+
+input[type="radio"]+label {
+    font-family: Lato;
+    font-size: 12px;
+
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+// 4 пример
+
+
+.decor a span {
+    font-family: Lato;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #b3b2b2;
+    text-transform: none;
+    text-decoration: none;
+    padding-left: 4px;
+}
+
+// 5 пример
+
+.decor a {
+    text-decoration: none;
+}
+
+// 6 пример
+
+.topcontent {
+    background-color: #f8f3f4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    &_name {
+        font-family: Lato;
+        font-size: 24px;
+        line-height: 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #f16d7f;
+    }
+
+    &_nav {
+        &_cat {
+            font-family: Lato;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #636363;
+            text-decoration: none;
+
+        }
+    }
+}
+
+.decor {
+    padding-top: 56px;
+    padding-bottom: 93px;
+
+    &__reg {
+        display: flex;
+        position: relative;
+        padding: 39px 35px 79px 167px;
+        gap: 291px;
+
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &_right.decor__h6.righth6 {
+        margin-bottom: 27px;
+    }
+
+    &__button {
+        margin-top: 38px;
+        width: 180px;
+        height: 50px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #4a4a4a;
+    }
+
+    &__h5 {
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #222222;
+        margin-top: 39px;
+        margin-bottom: 15px;
+    }
+
+    &__inputName {
+        font-family: Lato;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #222222;
+        margin-bottom: 16px;
+    }
+
+    &__inputName>span {
+        font-family: Lato;
+        font-size: 17px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #ff0d0d;
+    }
+
+    &__input {
+        width: 390px;
+        height: 45px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        margin-bottom: 23px;
+    }
+
+    &__p {
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #ff0d0d;
+        text-transform: none;
+        margin-bottom: 32px;
+    }
+
+    &__a {
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #222222;
+        text-transform: none;
+        margin-left: 32px;
+        
+    }
+}
+
+.decor__summ {
+    display: flex;
+
+}
+
+.allItemDec {
+    padding-top: 33px;
+    padding-bottom: 31px;
+    border-bottom: 1px solid #e8e8e8;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+
+}
+
+
+
+
+.decor__checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.decor__checkbox+label {
+    position: relative;
+    padding: 0 0 0 30px;
+    cursor: pointer;
+}
+
+.decor__checkbox+label:before {
+    content: " ";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #555555;
+    background: #ffffff;
+}
+
+.decor__checkbox+label:after {
+    content: " ";
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #222;
+    opacity: 0;
+    transition: .2s;
+}
+
+.decor__checkbox:checked+label:after {
+    opacity: 1;
+}
