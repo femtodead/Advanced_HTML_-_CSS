@@ -1,0 +1,329 @@
+@import "headerFooter";
+
+.topcontent {
+    background-color: #f8f3f4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    &_name {
+        font-family: Lato;
+        font-size: 24px;
+        line-height: 20px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #f16d7f;
+    }
+
+    &_nav {
+        &_cat {
+            font-family: Lato;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: #636363;
+            text-decoration: none;
+        }
+    }
+}
+
+.last_nav {
+    font-family: Lato;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f16d7f;
+}
+
+.basket {
+    &__categories {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        padding-top: 90px;
+    }
+
+    &__categoriesName {
+        font-family: Lato;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.015em;
+        color: #222222;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+
+        &_one {
+            margin: 0;
+            width: 100%;
+            justify-content: flex-start;
+        }
+    }
+
+    &__card {
+        display: flex;
+        padding-top: 22px;
+        padding-bottom: 25px;
+        border-top: 1px solid #eaeaea;
+    }
+
+    &__cardLeft {
+        display: flex;
+        width: 45%;
+        gap: 2%;
+    }
+
+    &__cardRight {
+        display: flex;
+        width: 55%;
+        align-items: center;
+    }
+
+    &__price {
+        display: flex;
+        justify-content: center;
+        width: 20%;
+        font-family: Lato;
+        font-size: 13px;
+        font-weight: 400;
+        color: #656565;
+    }
+
+    &__quantity {
+        display: flex;
+        justify-content: center;
+        width: 20%;
+        font-family: Lato;
+        font-size: 13px;
+        font-weight: 400;
+        color: #656565;
+    }
+
+    &__shipping {
+        display: flex;
+        justify-content: center;
+        width: 20%;
+        font-family: Lato;
+        font-size: 13px;
+        font-weight: 400;
+        color: #656565;
+    }
+
+    &__subtotal {
+        display: flex;
+        justify-content: center;
+        width: 20%;
+        font-family: Lato;
+        font-size: 13px;
+        font-weight: 400;
+        color: #656565;
+    }
+
+    &__cross {
+        display: flex;
+        justify-content: center;
+        width: 20%;
+        margin: 0px;
+        font-family: Lato;
+        font-size: 13px;
+        font-weight: 400;
+        color: #656565;
+    }
+
+    &__input {
+        height: 30px;
+        width: 30px;
+        border: 1px solid #eaeaea;
+        padding-left: 24px;
+    }
+
+    &__descriptionProd {
+        padding-top: 13px;
+        padding-bottom: 22px;
+    }
+
+
+    &__nameProd {
+        margin-bottom: 38px;
+        font-family: Lato;
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #222222;
+    }
+
+    &__colorProd {
+        margin-bottom: 5px;
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #575757;
+    }
+
+    &__sizeProd {
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #575757;
+    }
+
+    &__span {
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 300;
+        color: #6f6e6e;
+    }
+}
+
+.bottomContent {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 63px;
+        padding-top: 44px;
+        border-top: 1px solid #eaeaea;
+    }
+
+    &__button {
+        width: 21%;
+        height: 50px;
+        background-color: #ffffff;
+        border: 1px solid #eaeaea;
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #4a4a4a;
+
+        &_endCard {
+            width: 100%;
+            background-color: #f16d7f;
+            color: #ffffff;
+        }
+
+        &_midCard {
+            
+            margin-top: 25px;
+            border: 1px solid #eaeaea;
+            width: 33%;
+        }
+        &_botom{
+            width: 9%;
+            height: 35px;
+            margin-top: 23px;
+            margin-bottom: 79px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        gap: 2%;
+    }
+
+    &__card {
+        width: 32%;
+        height: 214px;
+
+        &_end {
+            background-color: #f5f3f3;
+            padding: 40px 44px 42px 41px;
+            box-sizing: border-box;
+
+        }
+    }
+
+    &__title {
+        font-family: Lato;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #222222;
+        margin-bottom: 22px;
+
+        &_mid {
+            margin-bottom: 28px;
+        }
+
+        &_end {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__span {
+        margin-left: 2%;
+        color: #f16d7f;
+    }
+
+    &__endP {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        font-family: Lato;
+        font-size: 11px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #4a4a4a;
+        margin-bottom: 14px;
+    }
+
+    &__midP {
+        font-family: Lato;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #000000;
+        margin-bottom: 24px;
+    }
+
+    &__input {
+        width: calc(100% - 17px);
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #b1b1b1;
+        padding-left: 17px;
+        height: 43px;
+        border: 1px solid #eaeaea;
+        z-index: 0;
+        &_one{
+            margin-top: 20px;
+        }
+    }
+
+    &__sumCountry {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        font-family: Lato;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #b1b1b1;
+        z-index: 100;
+    }
+
+    &__ditCountry {
+        border: 1px solid #eaeaea;
+        width: calc(100% - 29px);
+        padding-left: 17px;
+        padding-right: 12px;
+        height: 45px;
+        margin-bottom: 20px;
+        
+    }
+}
